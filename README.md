@@ -2,9 +2,9 @@
 
 ## Who picks Yasuo faster than me?
 Some code that helps you **pick your favorite champion as _quick as lightning_**!
-
-<br>
-<br>
+<br><br>
+[![](https://img.shields.io/badge/yasuoit-release-brightgreen)](https://github.com/nomi-san/yasuo/releases)
+[![](https://img.shields.io/badge/yasharp-release-blue)](https://github.com/nomi-san/yasuo/releases)
 
 ## Getting started
 
