@@ -1,7 +1,7 @@
 <img align="left" src="https://i.redd.it/1cp00o73bquz.jpg" width="140px">
 
 ## Who picks Yasuo faster than me?
-The simple script that supports you **pick your favorite champion as _quick as lightning_**!
+Some code that helps you **pick your favorite champion as _quick as lightning_**!
 
 <br>
 <br>
@@ -59,3 +59,14 @@ start([157, 10, 1]); // Yasuo, Kayle, Annie
 ```
 
 **6**. Make a **Practice** or a **Custom**/**Normal** game (Summoner's Rift - blind pick only), and enjoy!
+
+### Tools
+
+#### yasuoit
+- Written in AutoIt
+- Help you how to use LCU API
+
+#### yasharp
+- Written in **C#**
+- Use websocket for event listener
+- Talk to the system via chat box
