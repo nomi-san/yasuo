@@ -85,11 +85,9 @@ class WashingPole
         }
         else if (cmd.Equals("pick"))
         {
-            if (args.Length == 0)
-            {
-                champIds.Clear();
-            }
-            else
+            champIds.Clear();
+            
+            if (args.Length > 0)
             {
                 var champs = LastBreath.GetPlayableChamps();
                 foreach (var _n in args)
