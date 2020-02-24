@@ -18,6 +18,7 @@
 ;                   normal game only (Summoner's Rift) and...
 ;					helps you how to use LCU API in AutoIt.
 ; Repo............: https://github.com/nomi-san/yasuo/
+; Contributors....: + meouwu
 ;===============================================================
 
 #include <WinAPIProc.au3>				; Get process path
@@ -170,6 +171,7 @@ func getChampID($sChampName)
 	; Fix name
 	$sChampName = StringStripWS($sChampName, 8);
 	$sChampName = StringLower($sChampName);
+	$sChampName = decodeName($sChampName);
 
 	for $i = 0 to ($iNChamps-1)
 		$tmp = Json_Get($json, '[' & String($i) & ']["alias"]');
@@ -183,4 +185,63 @@ func getChampID($sChampName)
 	next
 
 	return -2; Don't own it
+endFunc
+
+; Decode popular champion names (just a few names)
+func decodeName($sName)
+	switch ($sName)
+		case "aa"
+            return "aatrox";
+        case "fish"
+            return "fizz";
+        case "iv", "j4", "jav"
+            return "jarvaniv";
+        case "kama"
+            return "karma";
+        case "kenen"
+            return "kennen";
+        case "ilao"
+            return "illaoi";
+        case "lee"
+            return "leesin";
+        case "lx"
+            return "lux";
+        case "md"
+            return "drmundo";
+        case "moon"
+            return "diana";
+        case "moder"
+            return "mordekaiser";
+        case "neko"
+            return "neeko";
+        case "pig"
+            return "sejuani";
+        case "popi", "popy"
+            return "poppy";
+        case "sun"
+            return "leona";
+        case "susan", "dog"
+            return "nasus";
+        case "tam"
+            return "tahmkench";
+        case "tf"
+            return "twistedfate";
+        case "tw"
+            return "twitch";
+		case "vaybu"
+			return "vayne";
+        case "wk", "wukong"
+            return "monkeyking";
+        case "xz"
+            return "xinzhao";
+        case "yi"
+            return "masteryi";
+        case "ys"
+            return "yasuo";
+        case "yum", "cat", "meo", "meow"
+			; Why not Rengar or Nida? Is Yuumi cuteeest?
+            return "yuumi";
+	endSwitch
+
+	return $sName;
 endFunc
