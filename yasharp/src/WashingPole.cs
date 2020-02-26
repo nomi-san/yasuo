@@ -319,7 +319,7 @@ class WashingPole
             case "ys":
                 return "yasuo";
             case "yum": case "cat": case "meo": case "meow":
-                return "yummi";
+                return "yuumi";
         }
         return name;
     }
