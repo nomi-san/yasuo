@@ -6,7 +6,18 @@ Some code that helps you **pick your favorite champion as _quick as lightning_**
 [![](https://img.shields.io/badge/yasuoit-release-brightgreen)](https://github.com/nomi-san/yasuo/releases)
 [![](https://img.shields.io/badge/yasharp-release-blue)](https://github.com/nomi-san/yasuo/releases)
 
-## Getting started
+## Tools
+
+### # [yasuoit](https://github.com/nomi-san/yasuo/tree/master/yasuoit)
+- Written in AutoIt
+- Help you how to use LCU API
+
+### # [yasharp](https://github.com/nomi-san/yasuo/tree/master/yasharp)
+- Written in **C#**
+- Use websocket for event listener
+- Talk to the system via chat box
+
+## Play on web browser with JavaScript
 
 ### Prepare
 
@@ -59,14 +70,3 @@ start([157, 10, 1]); // Yasuo, Kayle, Annie
 ```
 
 **6**. Make a **Practice** or a **Custom**/**Normal** game (Summoner's Rift - blind pick only), and enjoy!
-
-### Tools
-
-#### yasuoit
-- Written in AutoIt
-- Help you how to use LCU API
-
-#### yasharp
-- Written in **C#**
-- Use websocket for event listener
-- Talk to the system via chat box
