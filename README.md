@@ -7,7 +7,7 @@ Some code that helps you **pick your favorite champion as _quick as lightning_**
 
 ## Tools
 
-![](https://img.shields.io/badge/release-not%20yet-brightgreen)
+![](https://img.shields.io/badge/prebuilt%20binary-not%20yet-brightgreen)
 <br>
 ![](https://img.shields.io/badge/how%20to%20build-from%20source-blue)
 
