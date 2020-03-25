@@ -5,20 +5,20 @@ Some code that helps you **pick your favorite champion as _quick as lightning_**
 
 <br>
 
-## Tools
+## Some tools
 
 ![](https://img.shields.io/badge/prebuilt%20binary-not%20yet-brightgreen)
 <br>
-![](https://img.shields.io/badge/how%20to%20build-from%20source-blue)
+![](https://img.shields.io/badge/you%20must%20build-from%20source-blue)
 
-### # [yasuoit](https://github.com/nomi-san/yasuo/tree/master/yasuoit)
-- Written in AutoIt
+### ./[yasuoit](https://github.com/nomi-san/yasuo/tree/master/yasuoit)
+- Written in **AutoIt**
 - Help you how to use LCU API
 
-### # [yasharp](https://github.com/nomi-san/yasuo/tree/master/yasharp)
+### ./[yasharp](https://github.com/nomi-san/yasuo/tree/master/yasharp)
 - Written in **C#**
-- Use websocket for event listener
-- Talk to the system via chat box
+- Using websocket for event listener
+- Talk to the system via League's chatbox
 
 ## Play on web browser with JavaScript
 
