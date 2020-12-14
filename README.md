@@ -64,7 +64,7 @@ The browser will show all your owned and free champions (as JSON), please find I
 
 **4**. On this tab, open **console** (on Windows, press **Ctrl**+**Shift**+**J** on **Chrome**)
 
-Enter the code below (or copy code in [original.js](https://github.com/nomi-san/yasuo/blob/master/original.js)):
+Enter the code below (or copy code in [script.js](script.js)):
 ```js
 var start=function(){var t,n=arguments.length>0&&void 0!==arguments[0]?arguments[0]:[157],a=async function(t,n,a){return await fetch(n,{method:t,body:a,headers:{"Content-type":"application/json; charset=UTF-8"}}).then(function(t){return t.text()}).then(function(t){return JSON.parse(t.length?t:"{}")})},e=async function(t,n){return 0===Object.keys(await a("PATCH","/lol-champ-select/v1/session/actions/".concat(t),JSON.stringify({championId:n}))).length},c=setInterval(async function(){if(await async function(){return"InProgress"===(await a("GET","/lol-matchmaking/v1/ready-check")).state}())await async function(){return await a("POST","/lol-matchmaking/v1/ready-check/accept")}();else if((t=await async function(){var t=await a("GET","/lol-champ-select/v1/session"),n=t.localPlayerCellId,e=t.actions;return e?e[0].filter(function(t){return t.actorCellId===n})[0].id:-1}())>-1){for(var i=0;i<n.length&&!await e(t,n[i]);i++);await async function(t){return await a("POST","/lol-champ-select/v1/session/actions/".concat(t,"/complete"))}(t),clearInterval(c)}},250)};
 ```
@@ -74,6 +74,6 @@ var start=function(){var t,n=arguments.length>0&&void 0!==arguments[0]?arguments
 start([157, 10, 1]) // Yasuo, Kayle, Annie
 ```
 - Put it to console and enter
-- Some errors may be shown, don't worry 😎
+- Some bad requests (404) may be shown, don't worry 😎
 
 **6**. Make a **Practice** or a **Custom**/**Normal** game (Summoner's Rift - blind pick only), and enjoy!
