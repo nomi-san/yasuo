@@ -1,7 +1,8 @@
 ### Notes
 
-Run program as Administrator and open **League Client**. After the **successfully connected** dialog is shown,
-please create a new **dummy club** and type on the club's **chatbox**:
+- Run program as Administrator and open **League Client**
+- After the **successfully connected** dialog is shown,
+please ~~create a new **dummy club**~~ create a new conversation (with player which's no more playing, 'coz club is removed) and type on the **chatbox**:
 ```
 /?
 ```
