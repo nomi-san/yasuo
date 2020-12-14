@@ -13,18 +13,18 @@ var start = (championIds = [157]) => {
     }
     
     // Check if match found is shown
-    var isMatchFound = async () => (
+    const isMatchFound = async () => (
         (await request('/lol-matchmaking/v1/ready-check'))
             .state === 'InProgress' // Default state
     )
     
     // Accept match
-    var acceptMatch = async () => (
+    const acceptMatch = async () => (
         await request('/lol-matchmaking/v1/ready-check/accept', 'POST')
     )
     
     // Get your action ID
-    var getActionId = async () => {
+    const getActionId = async () => {
         const { localPlayerCellId, actions } = await request('/lol-champ-select/v1/session')
         if (!actions) return -1
         return actions[0] // Index 0 is our team
@@ -33,7 +33,7 @@ var start = (championIds = [157]) => {
     }
     
     // Pick a champion
-    var pick = async (id, championId) => (
+    const pick = async (id, championId) => (
         Object.keys(await request(
             `/lol-champ-select/v1/session/actions/${id}`,
             'PATCH', { championId }
@@ -41,27 +41,30 @@ var start = (championIds = [157]) => {
     )
     
     // Lock the selection
-    var lock = async (id) => (
+    const lock = async (id) => (
         await request(`/lol-champ-select/v1/session/actions/${id}/complete`, 'POST')
     )
     
     // Start auto accept match found and pick-lock
-    var id, inv = setInterval(async () => {
+    const inv = setInterval(async () => {
         // Check if match found
         if (await isMatchFound()) {
             // Accept match
             await acceptMatch()
-        } else if ((id = await getActionId()) > -1) {
-            // Pick each champs
-            for (var i = 0; i < championIds.length; ++i) {
-                if (await pick(id, championIds[i])) {
-                    break // Break on picked done
+        } else {
+            const id = await getActionId()
+            if (id > -1) {
+                // Pick each champs
+                for (var i = 0; i < championIds.length; ++i) {
+                    if (await pick(id, championIds[i])) {
+                        break // Break on picked done
+                    }
                 }
+                // Lock
+                await lock(id)
+                // Stop this callback
+                clearInterval(inv)
             }
-            // Lock
-            await lock(id)
-            // Stop this callback
-            clearInterval(inv)
         }
     }, 250) // Default timeout is 250ms
 }
