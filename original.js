@@ -54,7 +54,7 @@ var start = (championIds = [157]) => {
             // Check for valid action ID
             if (id > -1) {
                 // Pick each champ until done
-                championIds.some(champId => await pick(id, champId))
+                await championIds.some(async champId => await pick(id, champId))
                 // Lock
                 await lock(id)
                 // Stop this callback
