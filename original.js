@@ -13,9 +13,9 @@ var start = (championIds = [157]) => {
     }
     
     // Check if match found is shown
-    var isInProgress = async () => (
+    var isMatchFound = async () => (
         (await request('/lol-matchmaking/v1/ready-check'))
-            .state === 'InProgress'
+            .state === 'InProgress' // Default state
     )
     
     // Accept match
@@ -47,8 +47,8 @@ var start = (championIds = [157]) => {
     
     // Start auto accept match found and pick-lock
     var id, inv = setInterval(async () => {
-        // Check if is in accepting match found
-        if (await isInProgress()) {
+        // Check if match found
+        if (await isMatchFound()) {
             // Accept match
             await acceptMatch()
         } else if ((id = await getActionId()) > -1) {
