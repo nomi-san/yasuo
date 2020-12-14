@@ -13,11 +13,11 @@ Some code that helps you **pick your favorite champion as _quick as lightning_**
 <br>
 ![](https://img.shields.io/badge/you%20must%20build-from%20source-blue)
 
-### ./[yasuoit](https://github.com/nomi-san/yasuo/tree/master/yasuoit)
+### / [yasuoit](https://github.com/nomi-san/yasuo/tree/master/yasuoit)
 - Written in **AutoIt**
 - Help you how to use LCU API
 
-### ./[yasharp](https://github.com/nomi-san/yasuo/tree/master/yasharp)
+### / [yasharp](https://github.com/nomi-san/yasuo/tree/master/yasharp)
 - Written in **C#**
 - Using websocket for event listener
 - Talk to the system via League's chatbox
@@ -27,7 +27,7 @@ Some code that helps you **pick your favorite champion as _quick as lightning_**
 ### Prepare
 
 - Please make sure **League Client** is opened
-- A web browser which supports ES6 (e.g **Chrome**, **Opera** or **FireFox** latest, except **IE**)
+- A modern web browser which supports ES6, should be latest version, except **IE**
 
 ### Take action
 
@@ -47,15 +47,15 @@ Some code that helps you **pick your favorite champion as _quick as lightning_**
 ```
 "--remoting-auth-token=abcdef123456ABCDEF123456" "--app-port=56789"
 ```
-- `abcdef123456ABCDEF123456` is the auth key (pass).
-- `56789` is the address port.
+- `abcdef123456ABCDEF123456` is the auth key (password)
+- `56789` is the address port
 
 **3**. Open your browser, enter the URL:
 ```http
 https://127.0.0.1:PORT/lol-champions/v1/owned-champions-minimal
 ```
-- Replace **PORT** by your port.
-- After the login dialog shown, enter "**riot**" as username and your auth key as password.
+- Replace **PORT** by your port
+- After the login dialog shown, enter "**riot**" as username and your auth key as password
 
 The browser will show all your owned and free champions (as JSON), please find ID of your favorite champions. Use **Ctrl** + **F** with  keyword:
 ```
@@ -71,7 +71,9 @@ var start=function(){var t,n=arguments.length>0&&void 0!==arguments[0]?arguments
 
 **5**. Call `start` function, the first arg is champion ID array, e.g
 ```js
-start([157, 10, 1]); // Yasuo, Kayle, Annie
+start([157, 10, 1]) // Yasuo, Kayle, Annie
 ```
+- Put it to console and enter
+- Some errors may be shown, don't worry 😎
 
 **6**. Make a **Practice** or a **Custom**/**Normal** game (Summoner's Rift - blind pick only), and enjoy!
