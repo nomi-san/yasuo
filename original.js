@@ -1,16 +1,14 @@
+                        // Yasuo
 var start = (championIds = [157]) => {
     
     // Simple request with fetch API
-    const request = async (url, method = 'GET', body = undefined) => {
-        const data = await fetch(url, {
-            method: method,
+    const request = async (url, method = 'GET', body = undefined) => (
+        await fetch(url, {
+            method,
             body: JSON.stringify(body),
             headers: { 'Content-type': 'application/json; charset=UTF-8' }
-        }).then(res => res.text()).then(txt =>
-            JSON.parse(txt || '{}')
-        )
-        return data
-    }
+        }).then(res => res.ok ? res.json() : {})
+    )
     
     // Check if match found is shown
     const isMatchFound = async () => (
@@ -47,19 +45,16 @@ var start = (championIds = [157]) => {
     
     // Start auto accept match found and pick-lock
     const inv = setInterval(async () => {
-        // Check if match found
+        // Check for match found
         if (await isMatchFound()) {
             // Accept match
             await acceptMatch()
         } else {
             const id = await getActionId()
+            // Check for valid action ID
             if (id > -1) {
-                // Pick each champs
-                for (var i = 0; i < championIds.length; ++i) {
-                    if (await pick(id, championIds[i])) {
-                        break // Break on picked done
-                    }
-                }
+                // Pick each champ until done
+                championIds.some(champId => await pick(id, champId))
                 // Lock
                 await lock(id)
                 // Stop this callback
