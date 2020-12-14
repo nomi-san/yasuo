@@ -5,6 +5,8 @@ Some code that helps you **pick your favorite champion as _quick as lightning_**
 
 <br>
 
+### You can read the Vietnamese post <a href="https://nomisan.dev/posts/super-fast-pick-lock" target="_blank">here</a> 😀
+
 ## Some tools
 
 ![](https://img.shields.io/badge/prebuilt%20binary-not%20yet-brightgreen)
