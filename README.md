@@ -5,7 +5,7 @@ Some code that helps you **pick your favorite champion as _quick as lightning_**
 
 <br>
 
-### You can read the Vietnamese post <a href="https://nomisan.dev/posts/super-fast-pick-lock" target="_blank">here</a> 😀
+### You can read the Vietnamese post <a href="https://nomi.dev/posts/super-fast-pick-lock" target="_blank">here</a> 😀
 
 ## Some tools
 
