@@ -18,12 +18,12 @@ You can read the Vietnamese post <a href="https://nomi.dev/posts/super-fast-pick
 - Using websocket for event listener
 - Talk to the system via League's chatbox
 
-## Six steps to pick and lock Yasuo immediately on your web browser!
+## 4 steps to pick and lock Yasuo immediately on your web browser!
 
-### Prepare
+### Preparing
 
 - Please make sure **League Client** is opened
-- A modern web browser which supports ES6, should be latest version, except **IE**
+- A modern web browser, Chromium-based web browser is suggested
 
 ### Step 1 - Get League's auth
 
