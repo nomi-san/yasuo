@@ -73,11 +73,14 @@ Press enter to run the script.
 
 Next, execute the code below:
 ```js
-start([157, 10, 1]) // Yasuo, Kayle, Annie
+start([157, 10, 1])
 ```
-- Put it to console and enter
-- Some bad requests (404) may be shown, don't worry 😎
+- 157 is Yasuo's ID, 10 is Kayle and 1 is Annine
+- If someone picks Yasuo faster than you or Yasuo is not picakble, then Kayle is the next one
+- Setup the ID array by yours and enter
 
 ### Step 4 - Enjoy
 
 Make a Custom/Normal game (Summoner's Rift - blind pick only), and enjoy!
+
+// This script will accept you match found, and pick-lock your champ automatically. You should repeat the Step 3's **start** for the next match.
